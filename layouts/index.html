@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <div class="row">
-  <div class="col">
+  <div class="col-md-9 col-sm-12">
     <h1>Posts</h1>
     <ul class="list-unstyled">
       {{ range ( where .Site.RegularPages "Type" "blog") }}
@@ -10,7 +10,7 @@
       {{end}}
     </ul>
   </div>
-  <div class="col-3">
+  <div class="col-md-3 col-sm-12">
     <h1>Tags</h1>
     <p>
       {{ range $name, $taxonomy := .Site.Taxonomies.tags }}

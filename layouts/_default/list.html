@@ -16,7 +16,7 @@
     <h1>Tags</h1>
     <p>
       {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-      <a {{ if eq $name $title }}class="text-secondary fw-bold" {{end}} href="{{ printf " /tags/" | relURL }}{{ $name |
+      <a {{ if eq $name $title }}class="text-secondary" {{end}} href="{{ printf "/tags/" | relURL }}{{ $name |
         urlize }}">#{{ $name }}</a>
       {{ end }}
     </p>
