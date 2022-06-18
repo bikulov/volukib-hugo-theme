@@ -1,0 +1,18 @@
+{{ $url := .RelPermalink }}
+<header>
+  <nav class="navbar navbar-expand navbar-dark volukib-header">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{ .Site.BaseURL }}"><img src="/img/logo.png" class="volukib-logo" alt="logo"> {{
+        .Site.Title }}</a>
+      <ul class="navbar-nav">
+        {{ range .Site.Menus.main }}
+        <li class="nav-item">
+          {{ $menuUrl := .URL }}
+          <a class="nav-link text-uppercase {{ if eq $url $menuUrl }}active{{end}}" href="{{ $menuUrl }}">{{ .Name
+            }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </nav>
+</header>

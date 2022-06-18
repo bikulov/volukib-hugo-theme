@@ -1,0 +1,19 @@
+name = "Volukib"
+license = "MIT"
+licenselink = "https://github.com/bikulov/volukib-hugo-theme/blob/master/LICENSE"
+description = ""
+homepage = "https://bikulov.org/"
+tags = ["bootstrap", "minimal"]
+features = []
+min_version = "0.91.2"
+
+title = "Site title"
+
+[params.colors]
+  main = "#49453c"
+  a = "#ad9051"
+  a_hover = "#8f753d"
+
+[author]
+  name = "Dmitry Bikulov"
+  homepage = "https://bikulov.org/"

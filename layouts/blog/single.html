@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="row text-center mb-5">
+  <div class="col">
+    <h1>{{ .Title }}</h1>
+    <div>{{ .Date.Format "2006-01-02" }}</div>
+    <div>
+      {{ range $name := .Params.tags }}
+      <a class="" href="/tags/{{ $name | urlize }}">#{{ $name }}</a>
+      {{ end }}
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    {{ .Content }}
+  </div>
+</div>
+{{ end }}
