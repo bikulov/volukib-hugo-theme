@@ -2,8 +2,7 @@
 
 <div class="row">
   <div class="col-md-9 col-sm-12">
-    <h1>Posts</h1>
-    <ul class="list-unstyled">
+    <ul class="list-unstyled m-0">
       {{ range ( where .Site.RegularPages "Type" "blog") }}
       <li><small class="font-monospace text-secondary">{{ .Date.Format "2006-01-02" }}</small> <a
           href="{{ .Permalink }}">{{ .Title }}</a></li>
@@ -11,10 +10,9 @@
     </ul>
   </div>
   <div class="col-md-3 col-sm-12">
-    <h1>Tags</h1>
     <p>
       {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-      <a href="/tags/{{ $name | urlize }}">#{{ $name }}</a>
+      <a href="/tags/{{ $name | urlize }}" class="text-secondary">#{{ $name }}</a>
       {{ end }}
     </p>
   </div>
