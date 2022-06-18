@@ -3,7 +3,7 @@
 {{ $title := .Params.title }}
 
 <div class="row">
-  <div class="col">
+  <div class="col-md-9 col-sm-12">
     <ul class="list-unstyled m-0">
       <h1>#{{ $title }}</h1>
       {{ range .Data.Pages }}
@@ -12,7 +12,7 @@
       {{end}}
     </ul>
   </div>
-  <div class="col-3">
+  <div class="col-md-3 col-sm-12">
     <p>
       {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
       <a {{ if eq $name $title }}class="text-success"{{else}}class="text-secondary"{{end}} href="{{ printf "/tags/" | relURL }}{{ $name |
